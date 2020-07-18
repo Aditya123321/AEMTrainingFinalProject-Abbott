@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2020-03-16T23:51:07.155+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/abott/settings/wcm/templates/homepage-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="abott/components/structure/page">
+        <root
+            jcr:lastModified="{Date}2020-03-08T11:58:02.165+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header
+                jcr:created="{Date}2020-03-16T23:49:14.487+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-03-16T23:51:07.152+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="abott/components/content/header">
+                <headerleft jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        alttextleft="freestyle"
+                        headimgleft="/content/dam/abott/logo_freestyle.png"/>
+                </headerleft>
+                <headerright jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        alttextright="abbottlogo"
+                        headimgright="/content/dam/abott/abbott-logo.png"/>
+                </headerright>
+            </header>
+            <abbottnavbar_copy
+                jcr:created="{Date}2020-02-27T21:17:20.171+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-03-03T11:05:36.893+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="abott/components/content/abbottnavbar">
+                <navbaritems jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        navbarlabelheading="Home"
+                        navbarlabellink="/content/abott/home.html"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        navbarlabelheading="Stories"
+                        navbarlabellink="/content/abott/home/stories.html"/>
+                </navbaritems>
+            </abbottnavbar_copy>
+            <responsivegrid
+                jcr:created="{Date}2020-03-08T11:55:10.421+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-03-09T03:14:45.068+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true"/>
+            <abottfooter_copy_2120778887
+                jcr:created="{Date}2020-02-28T11:22:35.653+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-03-09T03:14:39.459+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="abott/components/content/abottfooter"
+                alttext="logo"
+                copyrighttext="© 2020 Abbott. All rights reserved."
+                logo="/content/dam/abott/logo_abbott_white.png"
+                mediatext="Stay connected"
+                text="&lt;p>FreeStyle, Libre, and related brand marks are trademarks of Abbott Diabetes Care Inc. in various jurisdictions. Other trademarks are the property of their respective owners. No use of any Abbott trademark, trade name, or trade dress in this site may be made without the prior written authorisation of Abbott Laboratories, except to identify the product or services of the company.&lt;/p>&#xd;&#xa;&lt;p>This website and the information contained herein is intended for use by residents of the UK. The product images are for illustrative purposes only.&lt;/p>&#xd;&#xa;"
+                textIsRich="true">
+                <footerheadlabels jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        labelheading="Privacy Policy"
+                        labellink="#"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        labelheading="Terms of Use"
+                        labellink="#"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        labelheading="Contact Us"
+                        labellink="#"/>
+                </footerheadlabels>
+                <medialabels jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        alttext="facebook"
+                        icon="/content/dam/abott/Facebook.png"
+                        link="https://www.facebook.com/FreeStyleMeters/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        alttext="twitter"
+                        icon="/content/dam/abott/Twitter.png"
+                        link="https://twitter.com/freestylediabet"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        alttext="Youtube"
+                        icon="/content/dam/abott/Youtube.png"
+                        link="https://www.youtube.com/channel/UCmqZgGEQaJY_786DXS_bClQ"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        alttext="instagram"
+                        icon="/content/dam/abott/logo_instagram.png"
+                        link="https://www.instagram.com/freestylediabetes/?igshid=yg7ocyl47csa"/>
+                </medialabels>
+            </abottfooter_copy_2120778887>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,132 @@
+<!--/* CORE COMPONENT TEMPLATE */-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/* PLACEHOLDER FOR STORY CARD COMPONENT */-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.storyUrl}"></sly>
+
+<!--/* OBJECT FOR COMPONENT MODEL */-->
+<sly data-sly-use.storyCard="com.trainingproject.abott.core.models.StoryCardModel">
+
+<!-- HTML FOR STORY CARD STARTS -->
+<div class="story-card-container">
+   <sly data-sly-test="${storyCard.image!='/content/dam/abott/stories/'}">
+      <div class="story-card-image row">
+         <img src="${storyCard.image}" alt="${storyCard.name}'s Image">
+      </div>
+   </sly>
+   <div class="story-card-content row">
+      <div class="story-card-name">
+         ${storyCard.name}
+      </div>
+      <div class="story-card-description-container row">
+         <div class="story-card-description col-md-9">
+            ${storyCard.description}
+         </div>
+         <img class="col-md-3" src="/content/dam/abott/circle%20with%20arrow.png" alt="button" data-toggle="modal" data-target="#${storyCard.title}">
+      </div>
+      <ol class="tags" data-sly-list.tag="${storyCard.tags}">
+         <li>${tag}</li>
+      </ol>
+      <div class="story-card-actions">
+         <div class="story-card-likes col-md-4">
+            <i class="fa fa-heart"></i>
+            <span>${storyCard.likes}</span>
+         </div>
+         <div class="story-card-share col-md-4">
+            <div>
+               <i class="fa fa-share-alt"></i>
+               <span>Share</span>
+            </div>
+            <div class="share-links">
+               <div class="social-icon"><i class="fa fa-twitter-square" id="twitter"></i></div>
+               <div class="social-icon"><i class="fa fa-facebook-square" id="facebook"></i></div>
+            </div>
+         </div>
+         <div class="story-card-views col-md-4">
+            <i class="fa fa-eye"></i>
+            <span>${storyCard.views}</span>
+         </div>
+      </div>
+   </div>
+</div>
+<!--MODAL STARTS-->
+<div class="modal fade" id="${storyCard.title}" role="dialog">
+   <div class="modal-dialog" id="modal-dialog-container">
+      <!-- Modal content-->
+      <div class="modal-content" id="card-modal-content">
+         <div class="modal-header" id="close-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+         </div>
+         <div class="modal-body">
+            <div>
+               <div class="itz-story">
+                  <div class="story-view">
+                     <div class="custom-modal-page">
+                        <!--	<div class="join-btn">
+                           <a href="#" class="join-btn-link">Join the community
+                              </a>
+                           </div> -->	
+                        <div class="modal-dialog-box">
+                           <div class="modal-dialog-view">
+                              <div class="modal-body-view">
+                                 <div class="row body-view">
+                                    <div class="col-md-5" id="popImage-container">
+                                       <div class="story-image-wrapper">
+                                          <img src="${storyCard.image}" alt="${storyCard.name}'s Image" class="user-img">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-7" id="modal-description-container">
+                                       <div class="card-body-details">
+                                          <div class="card-content">
+                                             <ol class="tags" data-sly-list.tag="${storyCard.tags}">
+                                                <li>${tag}</li>
+                                             </ol>
+                                             <div class="social-icons row">
+                                                <div class="col-md-4" id="icon1">
+                                                   <div class="flip">
+                                                      <i class="fa fa-heart"></i>
+                                                      <span class="icon-info">${storyCard.likes}</span>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-4"  id="share">
+                                                   <div class="flip">
+                                                      <i class="fa fa-share-alt icon-share"></i>
+                                                      <span class="icon-info">Share</span>
+                                                   </div>
+                                                   <div class="display-icons">
+                                                      <div class="social-media"><i class="fa fa-facebook"></i>
+                                                      </div>
+                                                      <div class="social-media"><i class="fa fa-twitter"></i>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-4"id="icon2">
+                                                   <div class="flip">
+                                                      <i class="fa fa-eye"></i>
+                                                      <span class="icon-info">
+                                                      ${storyCard.views}
+                                                      </span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <p class="card-name">${storyCard.name}</p>
+                                             <div class="modal-card-description">
+                                                ${storyCard.description}
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- MODAL ENDS -->
+<!-- HTML FOR STORY CARD ENDS -->

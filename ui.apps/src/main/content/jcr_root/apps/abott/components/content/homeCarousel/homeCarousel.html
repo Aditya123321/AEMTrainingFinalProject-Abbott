@@ -1,0 +1,77 @@
+<!--/* CORE COMPONENT TEMPLATE */-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/* PLACEHOLDER FOR HOMECAROUSEL COMPONENT */-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"></sly>
+
+<!--/* OBJECT FOR COMPONENT MODEL */-->
+<sly data-sly-use.homeCarousel="com.trainingproject.abott.core.models.HomeCarouselModel">
+
+<!-- HTML FOR HOME CAROUSEL STARTS -->
+<div class="share-victories">
+<div class="heading-container">
+   <h2>${homeCarousel.title}</h2>
+   <h3>${homeCarousel.subtitle}</h3>
+</div>
+<div class="carousel-container">
+   <div id="${properties['jcr:created'].hashCode.toString}" class="carousel slide homepageCarousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators" data-sly-list.carousel="${homeCarousel.carouselItem}">
+         <sly data-sly-test="${carouselList.first}">
+            <li data-target="#${properties['jcr:created'].hashCode.toString}" data-slide-to="${carouselList.index}" class="active"></li>
+         </sly>
+         <sly data-sly-test="${!carouselList.first}">
+            <li data-target="#${properties['jcr:created'].hashCode.toString}" data-slide-to="${carouselList.index}"></li>
+         </sly>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+         <sly data-sly-list.carousel="${homeCarousel.carouselItem}">
+            <sly data-sly-test="${carouselList.first}">
+               <div class="item active row">
+                  <div class="image-container col-md-8">
+                     <img src="${carousel.image}" alt="${carousel.name}'s Image">
+                  </div>
+                  <div class="content-container col-md-4">
+                     <h3>${carousel.name}</h3>
+                     <ol class="tags" data-sly-list.tags=${carousel.tags}>
+                        <li>${tags.tag}</li>
+                     </ol>
+                     <div class="description">
+                        ${carousel.description @context="html"}
+                     </div>
+                     <a href="#"><img src="/content/dam/abott/circle%20with%20arrow.png" class="button"></a>
+                  </div>
+               </div>
+            </sly>
+            <sly data-sly-test="${!carouselList.first}">
+               <div class="item row">
+                  <div class="image-container col-md-8">
+                     <img src="${carousel.image}" alt="${carousel.name}'s Image">
+                  </div>
+                  <div class="content-container col-md-4">
+                     <h3>${carousel.name}</h3>
+                     <ol class="tags" data-sly-list.tags=${carousel.tags}>
+                        <li>${tags.tag}</li>
+                     </ol>
+                     <div class="description">
+                        ${carousel.description @context="html"}
+                     </div>
+                     <a><img src="/content/dam/abott/circle%20with%20arrow.png" class="button"></a>
+                  </div>
+               </div>
+            </sly>
+         </sly>
+         <!-- Left and right controls -->
+         <a class="left carousel-control" href="#${properties['jcr:created'].hashCode.toString}" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left"></span>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#${properties['jcr:created'].hashCode.toString}" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right"></span>
+         <span class="sr-only">Next</span>
+         </a>
+      </div>
+   </div>
+</div>	
+<!-- HTML FOR HOME CAROUSEL ENDS -->

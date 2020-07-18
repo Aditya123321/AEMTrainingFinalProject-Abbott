@@ -1,0 +1,25 @@
+<!--/* CORE COMPONENT TEMPLATE */-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/* PLACEHOLDER FOR EXPERIENCE THE ZONE COMPONENT */-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.fileReference}"></sly>
+
+<!--/* OBJECT FOR COMPONENT MODEL -->
+<sly data-sly-use.experience="com.trainingproject.abott.core.models.ExperienceTheZoneModel">
+
+<!-- EXPERIENCE THE ZONE COMPONENT HTML STARTS -->
+<div id="zone-container" class="row">
+   <div class="zone-description-container col-md-4">
+      <div class="row zone-description">
+         ${experience.description @context="html"}
+      </div>
+      <div class="row">
+         <a class="zone-button" href="${experience.buttonLink}">${experience.buttonLabel}</a>
+      </div>
+   </div>
+   <div class="zone-image-container col-md-8">
+      <img src="${experience.fileReference}" alt="${experience.alt}">
+   </div>
+</div>
+<!-- EXPERIENCE THE ZONE COMPONENT HTML ENDS -->
+

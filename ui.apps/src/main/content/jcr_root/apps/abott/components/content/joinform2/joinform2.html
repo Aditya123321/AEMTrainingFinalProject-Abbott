@@ -1,0 +1,324 @@
+<!--/* PLACEHOLDER FOR FORM2 COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+
+<div id="jointform2" class="jointform2-wrapper">
+    <div class="color-section"></div>
+    <div class="step-progress centerFlex">
+        <input type="hidden" name="stepNumber" id="stepNumber" value="step1">
+        <a class="stepper active-stepper" id="step1">✓</a>
+        <hr class="horizontal active-hr" align="center">
+        <a class="stepper" id="step2" style="float:right">✓</a>
+    </div>
+
+    <div class="joint-form">
+        <div class="form-heading">${properties.formtitle}</div>
+    </div>
+    <div class="new-story-page-wrap">
+        <!--<a href="/content/adc/inthezone/stories.html" class="close-button new-story-page-close"><i class="fa fa-times" aria-hidden="true"></i></a>-->
+        <div class="container custom-container">
+            <div class="row">
+                <div class="col-lg-8 new-story-wrap">
+                    <div class="column-control-column">
+                        <div class="itz-new-story section">
+                            <div class="story-container">
+
+                                <input type="hidden" name="s3BucketName" id="s3BucketName" value="prod-itz-video-story">
+                                <input type="hidden" name="s3BucketSubFolder" id="s3BucketSubFolder" value="inthezone">
+                                <input type="hidden" name="s3BucketRegion" id="s3BucketRegion" value="eu-central-1">
+                                <input type="hidden" name="s3BucketAccessKey" id="s3BucketAccessKey" value="AKIAWQ4XIPRKYGNIELJP">
+                                <input type="hidden" name="s3BucketSecretAccessKey" id="s3BucketSecretAccessKey" value="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">
+                                <input type="hidden" name="bcOAuthClientId" id="bcOAuthClientId" value="177f49af-42d0-408b-a7fa-29eaa9410ab4">
+                                <input type="hidden" name="bcOAuthClientSecret" id="bcOAuthClientSecret" value="QbpZuZxdo7IUlGIZHBGpyNDyTRMDMFTmU2zrBzUXsdRNOy-FV1cTXjTshmzwM5VYOigg5DJ-FD2louoDi8qAjA">
+                                <input type="hidden" name="bcAccountId" id="bcAccountId" value="1336131408001">
+                                <input type="hidden" name="bcAccessTokenUrl" id="bcAccessTokenUrl" value="https://oauth.brightcove.com/v4/access_token">
+                                <input type="hidden" name="bcCreateVideoUrl" id="bcCreateVideoUrl" value="https://cms.api.brightcove.com/v1/accounts/ACCOUNT_ID/videos">
+                                <input type="hidden" name="bcDynamicIngestUrl" id="bcDynamicIngestUrl" value="https://ingest.api.brightcove.com/v1/accounts/ACCOUNT_ID/videos/VIDEO_ID/ingest-requests">
+
+                                <!-- WRAPPER BROWSE DIV-->
+
+                                <!-- FORM STARTS-->
+                                <form id="sharestory" action="/bin/send" method="post" enctype="multipart/form-data">
+                                    <div class="browse-field">
+                                        <div class="grey-container">
+                                            <a id="browse-close-button">
+
+                                                <i class="fa fa-times float-right browse-close" aria-hidden="true" style="pointer-events: auto;margin-left: 705px;"></i>
+                                            </a>
+
+                                            <div for="" id="browse-icon">
+
+                                                <p>Drop files or click here to upload</p>
+                                                <div class="browser-wrapper">
+                                                    <img src="/content/dam/abott/Group%202.png">
+                                                    <input id="file-id" type="file" name="myFile" value="myFile" />
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <p id="msgSector"></p>
+                                    </div>
+                                    <!-- /WRAPPER BROWSE DIV-->
+
+                                    <div class="story-row1">
+
+                                        <div class="tooltip--content">
+                                            <div class="tooltip-text">
+                                                <div class="row">
+                                                    <div class="col-1"></div>
+                                                    <div class="col-11  p-0 mb-4">
+                                                        <p></p>
+                                                        <p>
+                                                            <b>Guidelines for story submission</b>
+                                                        </p>
+
+                                                        <p>We really love receiving your stories and want to be able to publish them to our website, please follow the below to make sure that we can.</p>
+
+                                                        <p>Use original content - personal stories are powerful and extremely relatable
+                                                        </p>
+
+                                                        <p>Use a visual - you never know whose life you may touch</p>
+
+                                                        <p>Add the hashtag:
+                                                            <b>#LifeInTheZone</b> to your story</p>
+
+                                                        <p>You can either upload your story direct to the website or embed the link of an existing story from your social media channels (Twitter, YouTube, Instagram). Simply copy the link from the preferred channel and paste it into the #LifeInTheZone story submission section to create a story</p>
+
+                                                        <p>If showing the FreeStyle Libre sensor, please ensure it is applied directly to your skin on the back of your upper arm</p>
+
+                                                        <p>Steer clear of offensive language</p>
+
+                                                        <p>Avoid nudity, obscene or abusive language</p>
+
+                                                        <p>Please don't include your personal contact details, like your email or phone number in your story</p>
+
+                                                        <p>Omit mentioning competitor products</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="arrow-container-top">
+                                                <div class="arrow-up"></div>
+                                            </div>
+                                        </div>
+                                        <div class="fa fa-question-circle label-find mytooltip cutomtooltip">
+
+                                        </div>
+                                    </div>
+
+                                    <!-- TEXTAREA FOR STORY SHARING-->
+                                    <div class="grey-container" id="grey-container">
+                                        <textarea class="story-text" id="story-text-textarea" name="description" onchange="" placeholder="${properties.storyarea}"></textarea>
+                                        <p class="story-word-limit">
+                                            <span class="story-word-count">0</span>/1255</p>
+                                    </div>
+                                    <!-- TEXTAREA FOR STORY SHARING-->
+
+                                    <!-- BUTTON TO BE SHOWN ON MODAL LOAD-->
+                                    <a id="story-browse">
+                                        <span class="photo-video-button">
+                                            <i class="fa fa-picture-o" aria-hidden="true"></i> Photo/Video</span>
+                                    </a>
+                                    <!-- BUTTON TO BE SHOWN ON MODAL LOAD-->
+
+                                    <p class="video-upload-progress" style="display: none;">
+                                        <div></div>
+                                    </p>
+
+                                    <!-- BUTTON TO BE SHOWN ON CLICKING BROWSE SUBMIT-->
+                                    <p id="remove-image" style="display:none">
+                                        <span class="photo-video-button">× Remove Photo/Video</span>
+                                    </p>
+                                    <!-- BUTTON TO BE SHOWN ON CLICKING BROWSE SUBMIT-->
+
+                                    <!--   <p class="restricted_error" tabindex="1">Using wrong words:
+                                        <span class="restricted_error1"></span>
+                                    </p>
+                                    <p class="no-story-error" tabindex="1">Please share your story here</p>
+                                    <p class="story-or-embed-warning" tabindex="1">EMBED A STORY</p> -->
+
+                            </div>
+
+                        </div>
+                        <div class="itz-embed-story section">
+
+                            <div class="embed-container">
+                                <div class="tooltip--info tooltip-embed">
+                                    <div class="tooltip-text">
+                                        <div class="row">
+                                            <div class="col-1"></div>
+                                            <div class="col-11  p-0 mb-4">Please Note: You can only embed stories from public social media profiles. Please follow the instructions below to learn how.</div>
+
+                                            <div class="col-1 pt-2">
+                                                <!-- <a href="#" class="fa fa-instagram"></a> -->
+                                                <img src="/content/dam/abott/logo_instagram.png" class="social-img">
+                                            </div>
+                                            <div class="col-11 p-0 mb-4">
+                                                <p class="social-title">Instagram:</p>
+                                                <p class="mb-0">Find the Instagram post that you would like to share. Click on the three dots on the upper right corner of the post, then click ‘Go to post’. Copy the post’s link from the browser address bar and paste it here. Be sure that the post is publicly available.</p>
+                                                <span class="mb-0">For more information, click here: </span>
+                                                <a href="https://help.instagram.com/372819389498306" class="link">https://help.instagram.com/372819389498306</a>
+                                            </div>
+
+                                            <div class="col-1 pt-2">
+                                                <!-- <a href="#" class="fa fa-instagram"></a> -->
+                                                <img src="/content/dam/abott/Youtube.png" class="social-img">
+                                            </div>
+                                            <div class="col-11 p-0 mb-4">
+                                                <p class="social-title">YouTube:</p>
+                                                <p class="mb-0">Find the YouTube video that you would like to share, then copy the video’s link from the browser address bar and paste it here. Be sure that the video is not part of a playlist and is publicly available. The link should be a standard YouTube link, meaning youtu.be or other URL shorteners shouldn’t be used.</p>
+                                                <span class="mb-0">For more information, click here: </span>
+                                                <a href="https://support.google.com/youtube/answer/171780" class="link">https://support.google.com/youtube/answer/171780</a>
+                                            </div>
+
+                                            <div class="col-1 pt-2">
+                                                <!-- <a href="#" class="fa fa-instagram"></a> -->
+                                                <img src="/content/dam/abott/Twitter.png" class="social-img">
+                                            </div>
+                                            <div class="col-11 p-0 mb-4">
+                                                <p class="social-title">Twitter:</p>
+                                                <p class="mb-0">Find the Tweet that you would like to share. Copy the Tweet’s link from the browser address bar and paste it here. Be sure that you copy the link to the Tweet, not just the photo, and that the Tweet is publicly available.
+                                                </p>
+                                                <span class="mb-0">For more information, click here: </span>
+                                                <a href="https://help.twitter.com/en/using-twitter/tweet-and-moment-url" class="link">https://help.twitter.com/en/using-twitter/tweet-and-moment-url</a>
+                                            </div>
+                                        </div>
+                                        <div class="arrow-container-left">
+                                            <div class="arrow-left"></div>
+                                        </div>
+                                        <div class="arrow-container-top">
+                                            <div class="arrow-up"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-story-btn" style="color:#04119E; background-color: #ffffff">
+                                    <span>EMBED A STORY</span>
+                                    <i class="fa fa-facebook" style="color:#3b5998"></i>
+                                    <i class="fa fa-instagram" style="color:#e4405f"></i>
+                                    <i class="fa fa-twitter" style="color:#1DA1F2"></i>
+                                    <i class="fa fa-youtube" style="color:red"></i>
+                                </div>
+                                <div class="fa fa-question-circle label-help mytooltip social_cutomtooltip">
+                                </div>
+                                <div class="embed-url-main">
+                                    <label class="embed-label">EMBED A STORY</label>
+
+                                    <div class="embed-url-container">
+                                        <input type="text" class="embed-url" style="background-color: #E8E9EA;border: none;">&nbsp;&nbsp;
+                                        <i class="fa fa-close embed-close"></i>
+                                    </div>
+                                    <label class="embed-label">You can only upload stories from public profiles</label>
+                                </div>
+                                <!--      <p class="story-or-embed-warning1" tabindex="1">You can either Write a Story or Embed a Story.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="itz-tags section">
+                            <div class="tags-container">
+                                <div class="custom-container">
+                                    <div class="container-align tags-container-wrap rte-tags-comp  ">
+                                        <div class="threeColsTabs">
+                                            <div>
+                                                <p class="tags-title"></p>
+                                                <p>
+                                                    <b>Please tag your story with the topic(s) you feel are the most relevant.</b>
+                                                </p>
+                                                <p></p>
+                                            </div>
+                                            <div class="jointform-tag-set clearfix">
+                                                <sly data-sly-resource="${'Share your story' @ resourceType='/apps/abott/components/content/abotttags'}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tags-warning">
+                                        <p class="tag-error-text">Please select at least 1 tag, and a maximum of 3 tags</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//col -->
+
+                <!-- RIGHT SIDE COLUMN FOR DISPLAYING DATA-->
+                <div class="col-lg-4 preview-wrap">
+                    <div class="column-control-column">
+                        <div class="itz-preview section">
+                            <div class="preview-container-wrap">
+                                <div class="card preview-container">
+                                    <div class="container-align">
+
+                                        <!-- DISPLAYING TAGS-->
+                                        <div id="tags-display">
+
+                                        </div>
+                                        <!-- /DISPLAYING TAGS-->
+                                    </div>
+
+                                    <!-- NAME DISPLAY-->
+                                    <div class="story-details-container">
+
+                                    </div>
+                                    <!-- NAME DISPLAY-->
+
+                                    <!-- SOCIAL ICONS DISPLAY-->
+                                    <div class="embed-preview">
+                                        <!--        <iframe class="embed-facebook" style="height:500px;border:none;width: 100%;"></iframe>
+                                        <iframe class="embed-youtube"></iframe>
+                                        <iframe class="embed-insta" style="height: 575px;border:none"></iframe>
+                                        <div id="tweett"></div>   -->
+                                    </div>
+                                    <!-- SOCIAL ICONS DISPLAY-->
+
+                                    <!--PICTURE DISPLAY-->
+
+                                    <div class="placeholder">
+                                    </div>
+
+                                    <!-- PICTURE DISPLAY-->
+                                    <div id="image-wrapper" style="display:none">
+                                        <img id="imageupload" src="" alt="your image" class="card-img-top story-image" />
+                                    </div>
+                                    <!-- /PICTURE DISPLAY-->
+
+                                    <div class="text-placeholder">
+                                        <div class="designLine"></div>
+                                        <div class="designLine"></div>
+                                        <div class="designLine designLine2"></div>
+                                        <div class="designLine"></div>
+                                        <div class="designLine"></div>
+                                        <div class="designLine designLine2"></div>
+                                    </div>
+
+                                    <!-- STORY DISPLAY-->
+                                    <div class="card-body preview-text" style="padding: 12px;">
+                                        <p class="card-text title" id="story-posting"></p>
+                                    </div>
+                                    <!-- STORY DISPLAY-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//col -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modalfooterbutton">
+        <div class="form-container container custom-container">
+            <div class="row">
+                <div class="back-button col-6 col-md-8">
+                    <div class="leftNavWrapper">
+                        <a href="${properties.backlink}" class="btn nav-btns left-nav">${properties.backlabel}</a>
+                    </div>
+                </div>
+                <div class="next-button col-6 col-md-4 text-right">
+                    <input type="submit" href="${properties.submitlink}" class="btn nav-btns right-nav save-story" data-toggle="modal" data-target="#myModal" value="${properties.submitlabel}">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>

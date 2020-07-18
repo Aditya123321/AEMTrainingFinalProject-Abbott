@@ -1,0 +1,1 @@
+$(document).ready(function() {   $(".showModal").click(function(e) {     e.preventDefault();     console.log( $(this).attr("data-href"));     var url = $(this).attr("data-href");     console.log( url);     $("#iframeModalPopup iframe").attr("src", url);     $("#iframeModalPopup").modal("show");   }); });

@@ -1,0 +1,118 @@
+
+.button-wrapper {
+    text-align: center!important;
+    
+    a{
+        border-radius: 5px;
+        color: #021394;
+        background-color: #ffd100;
+        box-shadow: 0 0 16px 0 rgba(0,0,0,0.16);
+        padding: 13px 60px;
+        border: 0;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 30px;
+    }
+    
+    .button-wrapper__link__text {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        outline: 0;
+        font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+}
+
+
+//Modal LESS  
+
+.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-times:before {
+    content: "\f00d";
+}
+
+.modal-open {
+
+    padding-right: 16px;
+
+    .common-modal {
+
+        .modal-with-iframe.modal-content {
+			overflow-y: hidden;
+        }
+		.iframe-modal-dialog {
+            background-image: none;
+            padding-bottom: 0;
+            //height: 100%;
+        }
+
+        .modal-dialog {
+            padding-top: 0;
+            //min-height: 100%;
+            width: 100%;
+            max-width: 1440px;
+            margin-top: -2px;
+            background: #f8f9fa; //url(../../../../content/dam/adc/inthezone/images/three-card-modal-bg.png) no-repeat 41px 0 fixed;
+            background-size: contain;
+            margin: 0 auto;
+        }
+
+        .modal-content {
+            border-radius: 0;
+            background-color: transparent;
+            border: 0;
+            //overflow-y: auto;
+            //max-height: 100vh;
+            //padding-bottom: 70px;
+
+             .close {
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                z-index: 2;
+            }
+            .modal-header {
+                background-color: #f8f9fa;
+                border-bottom: 0;
+                padding: 0;
+
+                 .close {
+                    font-size: 24px;
+                    line-height: 24px;
+                    outline: 0;
+                    padding: 1rem;
+                    margin: -1rem -1rem -1rem auto;
+            		}
+            }
+
+            .iframe-modal-body {
+                max-width: 100%;
+                //height: 100vh;
+                padding: 0;
+
+                iframe {
+					height:115vh;
+                }
+            }
+
+            .modal-body {
+                //max-width: 950px;
+                margin: 0 auto;
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+#base=js
+removeimage.js
+storydisplay.js
+submitstory.js
+imageuploaddisplay.js
+tagdisplay.js
+close.js
+displayimage.js
+sharestory.js

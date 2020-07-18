@@ -1,0 +1,34 @@
+<!--/* CORE COMPONENT TEMPLATE */-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/* PLACEHOLDER FOR LIFE IN THE ZONE COMPONENT */-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"></sly>
+
+<!--/* OBJECT FOR COMPONENT MODEL */-->
+<sly data-sly-use.lifeInTheZone="com.trainingproject.abott.core.models.LifeInTheZoneModel">
+
+<!-- HTML FOR LIFE IN THE ZONE COMPONENT STARTS -->
+<div id="lifeinzone-container" class="row">
+   <h2>${lifeInTheZone.title}</h2>
+   <div class="lifeinzone-description-container col-md-6" style="background:${lifeInTheZone.bgColor @context='styleToken'}">
+      <div class="lifeinzone-description">
+         <h3>${lifeInTheZone.subtitle}</h3>
+         <div class="description">
+            <sly data-sly-resource="${'description1' @ resourceType='/apps/abott/components/content/descrpition'}"/>
+         </div>
+         <div class="description2">
+            <sly data-sly-resource="${'description2' @ resourceType='/apps/abott/components/content/descrpition'}"/>
+         </div>
+         <div class="description">
+            <sly data-sly-resource="${'description3' @ resourceType='/apps/abott/components/content/descrpition'}"/>
+         </div>
+         <a class="button" href="${lifeInTheZone.buttonLink}">${lifeInTheZone.buttonLabel}</a>
+      </div>
+   </div>
+   <div class="col-md-6" id="carousel-container">
+      <sly data-sly-resource="${'carousel' @ resourceType='/apps/abott/components/content/lifeInTheZoneCarousel'}"/>
+   </div>
+</div>
+<!-- HTML FOR LIFE IN THE ZONE COMPONENT ENDS -->
+
+

@@ -1,0 +1,37 @@
+#head {
+ width: 100%;
+  background-color:#ffd100;  
+    padding: 10px 9px;
+    position:fixed;
+  overflow: hidden;
+  top: 0;
+    z-index:99;
+
+
+}
+.headleft{
+  padding: 0px 0px 0px 290px;
+   float: left;
+        }
+.headright {
+  padding: 10px 310px 0px 0px;
+  float:right;  
+}
+
+.headleft a{
+  padding-right: 20px;
+}
+.headright a{
+  padding-top: 5px;
+}
+
+
+.headleft img{
+	height: 50px;
+    width: 120px;
+}
+.headright img{
+	height: 32px;
+    width: 120px;
+}
+

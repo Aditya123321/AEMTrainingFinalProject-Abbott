@@ -1,0 +1,32 @@
+<!--/* PLACEHOLDER FOR HEADER COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING HEADER MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.headobj="com.trainingproject.abott.core.models.HeaderModel" />
+<html>
+
+<!-- header starts-->
+<header id="head">
+    <!--/* ITERATING LEFT HEADER LIST ITEMS*/-->
+    <div class="headleft" data-sly-list.headdataleft="${headobj.headerleft}">
+        <!--/*LEFT HEADER LINK, IMAGE AND LABEL*/-->
+        <a href="${headdataleft.headlinkleft}">
+
+            <img src="${headdataleft.headimgleft}" alt="${headdataleft.alttextleft}">
+
+        </a>
+    </div>
+
+    <!--/* ITERATING RIGHT HEADER LIST ITEMS*/-->
+    <div class="headright" data-sly-list.headdataright="${headobj.headerright}">
+        <!--/*RIGHT HEADER LINK, IMAGE AND LABEL*/-->
+        <a href="${headdataright.headlinkright}">
+
+            <img src="${headdataright.headimgright}" alt="${headdataright.alttextright}">
+
+        </a>
+
+    </div>
+</header>
+<!-- header ends-->
+
+</html>

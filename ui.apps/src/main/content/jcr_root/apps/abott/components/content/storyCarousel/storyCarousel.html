@@ -1,0 +1,237 @@
+<!--/* CORE COMPONENT TEMPLATE */-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/* PLACEHOLDER FOR STORY CAROUSEL COMPONENT */-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"></sly>
+
+<!--/* OBJECT FOR COMPONENT MODEL */-->
+<sly data-sly-use.storyCarousel="com.trainingproject.abott.core.models.StoryCarouselModel">
+
+<!-- HTML FOR STORY CAROUSEL STARTS -->    
+<div class="share-victories">
+<div class="heading-container">
+   <h2>${storyCarousel.title}</h2>
+   <h3>${storyCarousel.subtitle}</h3>
+</div>
+<div class="carousel-container">
+   <div id="${properties['jcr:created'].hashCode.toString}" class="carousel slide homepageCarousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators" data-sly-list.carousel="${storyCarousel.carouselStory}">
+         <sly data-sly-test="${carouselList.first}">
+            <li data-target="#${properties['jcr:created'].hashCode.toString}" data-slide-to="${carouselList.index}" class="active"></li>
+         </sly>
+         <sly data-sly-test="${!carouselList.first}">
+            <li data-target="#${properties['jcr:created'].hashCode.toString}" data-slide-to="${carouselList.index}"></li>
+         </sly>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+         <sly data-sly-list.carousel="${storyCarousel.carouselStory}">
+            <sly data-sly-test="${carouselList.first}">
+               <div class="item active row">
+                  <div class="image-container col-md-8">
+                     <img src="${carousel.image}" alt="${carousel.name}'s Image">
+                  </div>
+                  <div class="content-container col-md-4">
+                     <h3>${carousel.name}</h3>
+                     <ol class="tags" data-sly-list.tags=${carousel.tags}>
+                        <li>${tags}</li>
+                     </ol>
+                     <div class="description">
+                        ${carousel.description @context="html"}
+                     </div>
+                     <a><img src="/content/dam/abott/circle%20with%20arrow.png" class="button" data-toggle="modal" data-target="#${carousel.pageTitle}"></a>
+                  </div>
+               </div>
+               <!--MODAL STARTS-->
+               <div class="modal fade" id="${carousel.pageTitle}" role="dialog">
+                  <div class="modal-dialog" id="modal-dialog-container">
+                     <!-- Modal content-->
+                     <div class="modal-content" id="card-modal-content">
+                        <div class="modal-header" id="close-header">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                           <div>
+                              <div class="itz-story">
+                                 <div class="story-view">
+                                    <div class="custom-modal-page">
+                                       <!--	<div class="join-btn">
+                                          <a href="#" class="join-btn-link">Join the community
+                                             </a>
+                                          </div> -->	
+                                       <div class="modal-dialog-box">
+                                          <div class="modal-dialog-view">
+                                             <div class="modal-body-view">
+                                                <div class="row body-view">
+                                                   <div class="col-md-5" id="popImage-container">
+                                                      <div class="story-image-wrapper">
+                                                         <img src="${carousel.image}" alt="${carousel.name}'s Image" class="user-img">
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-7" id="modal-description-container">
+                                                      <div class="card-body-details">
+                                                         <div class="card-content">
+                                                            <ol class="tags" data-sly-list.tag="${carousel.tags}">
+                                                               <li>${tag}</li>
+                                                            </ol>
+                                                            <div class="social-icons row">
+                                                               <div class="col-md-4" id="icon1">
+                                                                  <div class="flip">
+                                                                     <i class="fa fa-heart"></i>
+                                                                     <span class="icon-info">${carousel.likes}</span>
+                                                                  </div>
+                                                               </div>
+                                                               <div class="col-md-4"  id="share">
+                                                                  <div class="flip">
+                                                                     <i class="fa fa-share-alt icon-share"></i>
+                                                                     <span class="icon-info">Share</span>
+                                                                  </div>
+                                                                  <div class="display-icons">
+                                                                     <div class="social-media"><i class="fa fa-facebook"></i>
+                                                                     </div>
+                                                                     <div class="social-media"><i class="fa fa-twitter"></i>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                               <div class="col-md-4"id="icon2">
+                                                                  <div class="flip">
+                                                                     <i class="fa fa-eye"></i>
+                                                                     <span class="icon-info">
+                                                                     ${carousel.views}
+                                                                     </span>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <p class="card-name">${carousel.name}</p>
+                                                            <div class="modal-card-description">
+                                                               ${carousel.description}
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--MODAL ENDS-->
+            </sly>
+            <sly data-sly-test="${!carouselList.first}">
+               <div class="item row">
+                  <div class="image-container col-md-8">
+                     <img src="${carousel.image}" alt="${carousel.name}'s Image">
+                  </div>
+                  <div class="content-container col-md-4">
+                     <h3>${carousel.name}</h3>
+                     <ol class="tags" data-sly-list.tags=${carousel.tags}>
+                        <li>${tags}</li>
+                     </ol>
+                     <div class="description">
+                        ${carousel.description @context="html"}
+                     </div>
+                     <a><img src="/content/dam/abott/circle%20with%20arrow.png" class="button" data-toggle="modal" data-target="#${carousel.pageTitle}"></a>
+                  </div>
+               </div>
+               <!--MODAL STARTS-->
+               <div class="modal fade" id="${carousel.pageTitle}" role="dialog">
+                  <div class="modal-dialog" id="modal-dialog-container">
+                     <!-- Modal content-->
+                     <div class="modal-content" id="card-modal-content">
+                        <div class="modal-header" id="close-header">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                           <div>
+                              <div class="itz-story">
+                                 <div class="story-view">
+                                    <div class="custom-modal-page">
+                                       <!--	<div class="join-btn">
+                                          <a href="#" class="join-btn-link">Join the community
+                                             </a>
+                                          </div> -->	
+                                       <div class="modal-dialog-box">
+                                          <div class="modal-dialog-view">
+                                             <div class="modal-body-view">
+                                                <div class="row body-view">
+                                                   <div class="col-md-5" id="popImage-container">
+                                                      <div class="story-image-wrapper">
+                                                         <img src="${carousel.image}" alt="${carousel.name}'s Image" class="user-img">
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-7" id="modal-description-container">
+                                                      <div class="card-body-details">
+                                                         <div class="card-content">
+                                                            <ol class="tags" data-sly-list.tag="${carousel.tags}">
+                                                               <li>${tag}</li>
+                                                            </ol>
+                                                            <div class="social-icons row">
+                                                               <div class="col-md-4" id="icon1">
+                                                                  <div class="flip">
+                                                                     <i class="fa fa-heart"></i>
+                                                                     <span class="icon-info">${carousel.likes}</span>
+                                                                  </div>
+                                                               </div>
+                                                               <div class="col-md-4"  id="share">
+                                                                  <div class="flip">
+                                                                     <i class="fa fa-share-alt icon-share"></i>
+                                                                     <span class="icon-info">Share</span>
+                                                                  </div>
+                                                                  <div class="display-icons">
+                                                                     <div class="social-media"><i class="fa fa-facebook"></i>
+                                                                     </div>
+                                                                     <div class="social-media"><i class="fa fa-twitter"></i>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                               <div class="col-md-4"id="icon2">
+                                                                  <div class="flip">
+                                                                     <i class="fa fa-eye"></i>
+                                                                     <span class="icon-info">
+                                                                     ${carousel.views}
+                                                                     </span>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <p class="card-name">${carousel.name}</p>
+                                                            <div class="modal-card-description">
+                                                               ${carousel.description}
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--MODAL ENDS-->
+            </sly>
+         </sly>
+         <!-- Left and right controls -->
+         <a class="left carousel-control" href="#${properties['jcr:created'].hashCode.toString}" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left"></span>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#${properties['jcr:created'].hashCode.toString}" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right"></span>
+         <span class="sr-only">Next</span>
+         </a>
+      </div>
+   </div>
+</div>
+<!-- HTML FOR STORY CAROUSEL ENDS --> 

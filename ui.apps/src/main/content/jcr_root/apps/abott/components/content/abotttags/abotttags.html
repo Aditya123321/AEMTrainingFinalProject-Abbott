@@ -1,0 +1,18 @@
+<!--/* PLACEHOLDER FOR TAGS COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING TAGS LIST MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.tagmodel="com.trainingproject.abott.core.models.TagListModel">
+    <div class="tags-container">
+        <div class="title">${properties.tagheading}</div>
+        <div class="custom-container">
+            <div class="tags-container-wrapper">
+                <!--/* ITERATING TAGS LIST ITEMS TO ACCESS TAGNAMES */-->
+                <div class="tag-set clearfix" data-sly-list.taglist="${tagmodel.tagnameList}">
+                    <a class="one-col" id="${taglist.tagName}">
+                        <span id="${taglist.tagName}" class="span-text">${taglist.tagName}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>

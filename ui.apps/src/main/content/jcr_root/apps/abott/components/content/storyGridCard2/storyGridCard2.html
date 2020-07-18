@@ -1,0 +1,107 @@
+<!--/* CORE COMPONENT TEMPLATE */-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/* PLACEHOLDER FOR STORY GRID CARDS 2 COMPONENT */-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.storyUrl}"></sly>
+
+<!--/* OBJECT FOR COMPONENT MODEL */-->
+<sly data-sly-use.gridCard="com.trainingproject.abott.core.models.StoryCardModel">
+
+<!-- HTML FOR STORY GRID CARD STARTS -->
+<div class="grid-card1-horizontal">
+   <div class="grid-hcard-content col-md-6">
+      <div class="grid-hcard-name">
+         ${gridCard.name}
+      </div>
+      <div class="grid-hcard-description">
+         ${gridCard.description}
+      </div>
+      <div class="grid-hcard-button">
+         <img src="/content/dam/abott/blue-arrow-circle.png" alt="button" data-toggle="modal" data-target="#${gridCard.title}">
+      </div>
+   </div>
+   <div class="grid-hcard-image col-md-6">
+      <img src="${gridCard.image}" alt="${gridCard.name}'s Image">
+   </div>
+</div>
+<!--MODAL STARTS-->
+<div class="modal fade" id="${gridCard.title}" role="dialog">
+   <div class="modal-dialog" id="modal-dialog-container">
+      <!-- Modal content-->
+      <div class="modal-content" id="card-modal-content">
+         <div class="modal-header" id="close-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+         </div>
+         <div class="modal-body">
+            <div>
+               <div class="itz-story">
+                  <div class="story-view">
+                     <div class="custom-modal-page">
+                        <!--	<div class="join-btn">
+                           <a href="#" class="join-btn-link">Join the community
+                              </a>
+                           </div> -->	
+                        <div class="modal-dialog-box">
+                           <div class="modal-dialog-view">
+                              <div class="modal-body-view">
+                                 <div class="row body-view">
+                                    <div class="col-md-5" id="popImage-container">
+                                       <div class="story-image-wrapper">
+                                          <img src="${gridCard.image}" alt="${gridCard.name}'s Image" class="user-img">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-7" id="modal-description-container">
+                                       <div class="card-body-details">
+                                          <div class="card-content">
+                                             <ol class="tags" data-sly-list.tag="${gridCard.tags}">
+                                                <li>${tag}</li>
+                                             </ol>
+                                             <div class="social-icons row">
+                                                <div class="col-md-4" id="icon1">
+                                                   <div class="flip">
+                                                      <i class="fa fa-heart"></i>
+                                                      <span class="icon-info">${gridCard.likes}</span>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-4"  id="share">
+                                                   <div class="flip">
+                                                      <i class="fa fa-share-alt icon-share"></i>
+                                                      <span class="icon-info">Share</span>
+                                                   </div>
+                                                   <div class="display-icons">
+                                                      <div class="social-media"><i class="fa fa-facebook"></i>
+                                                      </div>
+                                                      <div class="social-media"><i class="fa fa-twitter"></i>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-4"id="icon2">
+                                                   <div class="flip">
+                                                      <i class="fa fa-eye"></i>
+                                                      <span class="icon-info">
+                                                      ${gridCard.views}
+                                                      </span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <p class="card-name">${gridCard.name}</p>
+                                             <div class="modal-card-description">
+                                                ${gridCard.description}
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!--MODAL ENDS-->
+<!-- HTML FOR STORY GRID CARD ENDS -->

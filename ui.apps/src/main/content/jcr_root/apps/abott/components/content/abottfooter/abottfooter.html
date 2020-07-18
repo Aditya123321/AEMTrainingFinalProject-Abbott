@@ -1,0 +1,35 @@
+<!--/* PLACEHOLDER FOR FOOTER COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING FOOTER MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.footobj="com.trainingproject.abott.core.models.FooterModel" />
+<div class="footer">
+    <div class="customfooter">
+        <div class="row">
+            <div class="footer-logo col-md-3">
+                <!--/* ACCESSING THE FOOTER LOGO AND ALTERNATIVE TEXT*/-->
+                <img src="${footobj.logo}" class="footerimg" alt="${footobj.alttext}">
+            </div>
+            <div class="copyright col-md-9">
+                <!--/* ACCESSING THE FOOTER COPYRIGHT TEXT*/-->
+                <p>${footobj.copyrighttext}</p>
+                <!--/*ITERATING LABELS LIST TO ACCESS LIST LABEL AND CORRESPONDING LINKS*/-->
+                <ul class="list-inline labels" data-sly-list.link="${footobj.footerheadlabels}">
+                    <li>
+                        <a href="${link.labellink}" target="_blank">${link.labelheading}  <span class="line"> | </span></a>
+                    </li>
+                </ul>
+                <ul class="list-inline social">
+                    <li style="border:none">${footobj.mediatext}</li>
+                    <!--/*ITERATING SOCIAL MEDIA LIST TO ACCESS ICONS AND CORRESPONDING LINKS*/-->
+                    <li data-sly-list.social="${footobj.medialabels}">
+                        <a href="${social.link}" target="_blank"><img src="${social.icon}" alt="${social.alttext}" width="24" height="24"> </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footerbody">
+            <p>${footobj.text @ context='html'}</p>
+        </div>
+    </div>
+</div>

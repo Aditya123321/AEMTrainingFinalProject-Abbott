@@ -1,0 +1,37 @@
+.footer{
+   background-color: #222731;
+   color:#fff;
+    font-size: 12px;
+     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin-top: 70px;
+}
+
+.customfooter{
+   margin: 0% 21% 0% 20%;
+    padding: 48px 0px;
+    }
+
+.footer-logo{
+   padding-top:31px;
+    }
+
+.copyright{
+  text-align: right;
+}
+
+.social li a{
+        padding: 0px 5px;
+}
+.social{
+    margin-top: 33px;
+    }
+.labels li a{
+color:#fff;
+            padding: 0px 0px 24px 0px;
+
+        }
+.labels{
+  margin-top:15px;
+    }
+
+    

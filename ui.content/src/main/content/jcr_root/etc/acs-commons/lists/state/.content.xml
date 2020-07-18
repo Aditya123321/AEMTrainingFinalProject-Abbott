@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-12T11:25:00.824+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="State"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Andhra Pradesh"
+                value="Andhra Pradesh"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Arunachal Pradesh"
+                value="Arunachal Pradesh"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Assam"
+                value="Assam"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Bihar"
+                value="Bihar"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Chhattisgarh"
+                value="Chhattisgarh"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Goa"
+                value="Goa"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Gujarat"
+                value="Gujarat"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Haryana"
+                value="Haryana"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Himachal Pradesh"
+                value="Himachal Pradesh"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Jharkhand"
+                value="Jharkhand"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Karnataka"
+                value="Karnataka"/>
+            <item11
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kerala"
+                value="Kerala"/>
+            <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Madhya Pradesh"
+                value="Madhya Pradesh"/>
+            <item13
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Maharashtra"
+                value="Maharashtra"/>
+            <item14
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Manipur"
+                value="Manipur"/>
+            <item15
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Meghalaya"
+                value="Meghalaya"/>
+            <item16
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mizoram"
+                value="Mizoram"/>
+            <item17
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nagaland"
+                value="Nagaland"/>
+            <item18
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Odisha"
+                value="Odisha"/>
+            <item19
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Punjab"
+                value="Punjab"/>
+            <item20
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Rajasthan"
+                value="Rajasthan"/>
+            <item21
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sikkim"
+                value="Sikkim"/>
+            <item22
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tamil Nadu"
+                value="Tamil Nadu"/>
+            <item23
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Telangana"
+                value="Telangana"/>
+            <item24
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tripura"
+                value="Tripura"/>
+            <item25
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Uttar Pradesh"
+                value="Uttar Pradesh"/>
+            <item26
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Uttarakhand"
+                value="Uttarakhand"/>
+            <item27
+                jcr:primaryType="nt:unstructured"
+                jcr:title="West Bengal"
+                value="West Bengal"/>
+        </list>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,17 @@
+<!--/* PLACEHOLDER FOR SHARE YOUR STORY BANNER COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING STORY BANNER  MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.bannermodel="com.trainingproject.abott.core.models.ShareYourStoryBannerModel">
+    <div class="block">
+        <div class="getStarted-wrapper">
+            <!--/* ACCESSING BANNER BACKGROUND COLOR AND DESCRIPTION */-->
+            <div class="col-12 col-md-7 start-text" style="padding: 0px; margin: 0px; background-color:${bannermodel.textbackgroundcolor @ context='styleString'}; color:${bannermodel.fontcolor @ context='styleString'};">
+                <div class="descript descript-nocolor">${bannermodel.desc @ context='html'}</div>
+            </div>
+            <!--/* ACCESSING BANNER BACKGROUND COLOR */-->
+            <div class="col-12 col-md-5 text-center btn-section getStarted-button descript" style="background-color:${bannermodel.buttonbackgroundcolor @ context='styleString'};">
+                <!--/* INCLUDING SHARE YOUR STORY COMPONENT */-->
+                <sly data-sly-resource="${'Share your story' @ resourceType='/apps/abott/components/content/shareyourstory'}" />
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,10 @@
+<!--/* PLACEHOLDER FOR HERO BANNER COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING HERO BANNER MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.bannermodel="com.trainingproject.abott.core.models.BannerModel">
+    <!--/* HERO BANNER IMAGE SOURCE AND ALTERNATE TEXT*/-->
+    <div class="banner-wrap">
+        <img src="${bannermodel.fileReference}" alt="${properties.alttext}">
+        <p>${bannermodel.title}</p>
+    </div>
+</sly>

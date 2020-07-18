@@ -1,0 +1,31 @@
+.block {
+   width: 950px;
+    margin: 0 auto;
+    padding: 90px 0px 70px 0px;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 24px 0 rgba(34,39,49,0.2);
+}
+.block .getStarted-wrapper {
+    flex-direction: row;
+    margin-top: -90px;
+}
+.descript-nocolor {
+    height: 160px;
+}
+.descript {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    vertical-align: middle;
+     padding: 43px 80px;
+    margin-bottom: 0;
+}
+
+.btn-section {
+
+    height: 160px;
+}
+.start-text{
+  padding:0;
+    }

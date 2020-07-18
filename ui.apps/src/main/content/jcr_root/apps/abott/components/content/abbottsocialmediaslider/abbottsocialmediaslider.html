@@ -1,0 +1,11 @@
+<!--/* PLACEHOLDER FOR SOCIAL MEDIA SLIDER COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING SOCIAL MEDIA SLIDER MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.socialobj="com.trainingproject.abott.core.models.SocialMediaSliderModel" />
+<!--/* ITERATING THE LIST USING OBJECT TO ACCESS ICON LINK AND STYLE*/-->
+<div class="sociallink" data-sly-list.socialdata="${socialobj.socialmediaslider}">
+    <a href="${socialdata.socialmedialink  @ context='uri'} " style="background:${socialdata.iconcolor @context='styleToken'}">
+        <i class="${socialdata.iconclass}"></i>
+    </a>
+</div>
+</sly>

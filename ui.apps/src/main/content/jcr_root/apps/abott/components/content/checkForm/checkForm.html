@@ -1,0 +1,63 @@
+
+<div>
+<h2>Upload files to the Adobe CQ DAM</h2>
+
+  <p id="support-notice">Your browser does not support Ajax uploads :-(The form will be submitted as normal.</p>
+  
+        <!-- The form starts -->
+        <form action="/bin/send" method="post" enctype="multipart/form-data" id="shareStoryForm">
+     Name:<input type="text" name="name"/><br/><br/>
+    Email:<input type="email" name="email"/><br/><br/>
+   Experience: <select id="experience" name="experience">
+      <option value="parent">Parent</option>
+      <option value="person with type1">Person with Type 2</option>
+      <option value="person with type2">Person with Type 1</option>
+      <option value="caregiver">Caregiver</option>
+    </select><br/><br/>
+    
+     Country:<select id="country"  name="country">
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="Canada">Canada</option>
+    </select><br/><br/>
+    
+    Postcode:<input type="text" name="postcode"><br/><br/>
+
+      
+      Description<textarea name="description" id="description"></textarea><br/><br/>
+      
+      <label for="myfile">Select a file:</label>
+
+      Tags:
+     	<div class="tag-container">
+                   <p class="tag">Convenience</p>
+                   <p class="tag">Improved monitoring</p>
+                   <p class="tag">Better technology</p>
+                   <p class="tag">Exercise</p>
+                   <p class="tag">Data sharing</p>
+                   <p class="tag">Diabetes knowledge</p>
+                   <p class="tag">Diet</p>
+         </div>
+                                                                       <br><br>
+            <!-- The file to upload -->
+            <p><input id="file-id" type="file" name="myFile" />
+  
+                <!--
+                  Also by default, we disable the upload button.
+                  If Ajax uploads are supported we'll enable it.
+                -->
+                <input type="submit" value="Upload" id="upload-button-id" /></p>
+
+            <!-- Placeholders for messages set by event handlers -->
+            <p id="upload-status"></p>
+            <p id="progress"></p>
+            <pre id="result"></pre>
+  
+        </form>
+       <div class="selected-tag">
+
+       </div>
+  
+</div>
+<button>Share</button>

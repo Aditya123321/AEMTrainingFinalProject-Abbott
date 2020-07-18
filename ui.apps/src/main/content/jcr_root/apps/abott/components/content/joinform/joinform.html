@@ -1,0 +1,103 @@
+<!--/* PLACEHOLDER FOR FORM COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!-- FORM WRAPPER DIV OPENS -->
+<div class="jointform-wrapper">
+    <div class="step-progress centerFlex">
+        <input type="hidden" name="stepNumber" id="stepNumber" value="step1">
+        <a class="stepper" id="step1">✓</a>
+        <hr class="horizontal" align="center">
+        <a class="stepper" id="step2" style="float:right">✓</a>
+    </div>
+
+    <div class="joint-form">
+        <div class="form-heading">${properties.formtitle}</div>
+        <div class="form-body">
+            <div class="form-section">${properties.subtitle @ context='html'}</div>
+            <div class="section3">
+                <!-- FORM CONTAINER OPENS -->
+                <form class="details">
+                    <div class="form-group">
+                        <label for="name" class="form-labels">${properties.namefield}*</label>
+                        <input type="text" class="form-control form-fields" id="name" name="name" autocomplete="nope" placeholder="${properties.nameholder}" style="background-color: rgb(232, 233, 234);" required/>
+                        <p id="name-error-text" class="error-text" style="display: none;">Please enter name</p>
+                        <p id="name-invalid" class="error-text" style="display: none;">Please enter a valid name</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-labels">${properties.emailfield}*</label>
+                        <input type="email" class="form-control form-fields" id="email" name="email" autocomplete="nope" placeholder="${properties.emailplaceholder}" style="background-color: rgb(232, 233, 234);" required/>
+                        <p id="email-error-text" class="error-text" style="display: none;">Please enter Email Id</p>
+                        <p id="name-invalid" class="error-text" style="display: none;">Please enter a valid Email Id</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select" class="form-labels">${properties.dropdownfield}</label>
+                        <select class="form-control form-fields freestyle">
+                            <option value="Please select"><a class="dropdown-item" href="#">Please select</a></option>
+                            <option value="Person with Type 1"><a class="dropdown-item" href="#">Person with Type 1</a></option>
+                            <option value="Person with Type 2"><a class="dropdown-item" href="#">Person with Type 2</a></option>
+                            <option value="Parent"><a class="dropdown-item" href="#">Parent</a></option>
+                            <option value="Caregiver"><a class="dropdown-item" href="#">Caregiver</a></option>
+                        </select>
+                    </div>
+
+                    <div class="row secondform-group">
+                        <div class="form-group col-sm-4">
+                            <label for="select" class="secondform-labels">${properties.countryfield}</label>
+                            <select class="secondform-control form-fields country">
+                                <option value="0"><a class="dropdown-item" href="#">Please select</a></option>
+                                <option value="1"><a class="dropdown-item" href="#">United Kingdom</a></option>
+                            </select>
+                        </div>
+                        <div class="form-group seconddivform-group col-sm-4">
+                            <label for="select" class="secondform-labels">${properties.postalcodefield}</label>
+                            <input type="text" class="secondform-control form-fields postcode" id="${properties.postalcodeplaceholder}" placeholder="Enter the PostCode">
+                        </div>
+                    </div>
+                    <div class="section4">
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input disclaimer join-check" type="checkbox" required name="disclaimer" id="disclaimer1" required>
+                                <div class="check-text check-must">
+                                    <p>I have read and agree with Abbott's <a href="${policylink}" target="_blank">Privacy Policy</a> and <a href="${properties.conditionlink}" target="_blank">Terms and conditions</a>
+                                    </p>
+<p id="checkbox-error-text" class="error-text" style="display: none; left: 106px; top: 48px; line-height: 15px;">Please agree to Privacy Policy and Terms and Conditions in order to proceed</p>
+                                </div>
+                            </label>
+
+                            <label class="form-check-label">
+                                <input class="form-check-input disclaimer join-check" type="checkbox" name="disclaimer" id="disclaimer2">
+                                <div class="check-text check-must">
+                                    <p>I agree to receive information on Abbott´s products and services</p>
+                                </div>
+                            </label>
+
+                            <label class="form-check-label">
+                                <input class="form-check-input disclaimer join-check" type="checkbox" name="disclaimer" id="disclaimer3">
+                                <div class="check-text check-must">
+                                    <p>I agree Abbott can use my submission in future marketing and promotional materials</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalfooterbutton">
+        <div class="form-container container custom-container">
+            <div class="row">
+                <div class="back-button col-6 col-md-8">
+
+                </div>
+                <div class="next-button col-6 col-md-4 text-right">
+                    <a href="${properties.nextlink}" class="btn nav-btns right-nav" id="nextbutton">${properties.btnlabel}</a>
+
+                </div>
+            </div>
+        </div>
+        </form>
+        <!-- FORM CONTAINER CLOSES -->
+    </div>
+</div>
+<!-- WRAPPER FORM DIV CLOSES -->

@@ -1,0 +1,21 @@
+<!--/* PLACEHOLDER FOR NAVBAR COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING NAVBAR MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.navobj="com.trainingproject.abott.core.models.NavbarModel"/>
+${navobj.text}
+<div class="nav-bar-header">
+   <div class="navcontainer">
+      <div class="navigation">
+         <div class="customcontainer">
+            <ul class="customnav" data-sly-list.navdata="${navobj.navbaritems}">
+               <!--/* ITERATING NAVBAR LIST ITEMS*/-->
+               <li>
+                  <!--/*NAVBAR LINK AND LABEL*/-->
+                  <a class="navlink" href="${navdata.navbarlabellink}">${navdata.navbarlabelheading}</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+</sly>

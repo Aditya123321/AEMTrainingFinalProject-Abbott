@@ -1,0 +1,129 @@
+.story-card-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 24px 0 rgba(34,39,49,0.2);
+    margin: 20px auto;
+    //padding: 0 100px;
+    width: 630px;
+    .story-card-image {
+        text-align: center;
+        img {
+        }
+    }
+    .story-card-content {
+        margin: 0 0 0 70px;
+        padding: 1.25rem;
+        padding-bottom: 34px;
+
+		.story-card-name {
+            color: #63666a;
+    		font-size: 20px;
+    		font-weight: 500;
+    		line-height: 40px;
+   			margin-bottom: 2px;
+    		width: calc(100% - 60px);
+        }
+        .story-card-description-container{
+        	.story-card-description {
+                    color: #63666a;
+                    display:inline-block;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    max-height: 144px;
+                    overflow: hidden;
+                    width: 500px;
+            }
+            img {
+                	cursor: pointer;
+                    margin-left: -30px;
+                    margin-top: 110px;
+                    width: 16%;
+             }
+        }
+        .tags {
+            margin-left: -40px;
+            li {
+            background-color: #ffd100;
+            border-radius: 27px;
+            color: #222731;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .3px;
+            line-height: 24px;
+            margin-right: 9px;
+    		margin-bottom: 5px;
+            padding: 0 9px;
+            text-align: center;
+            vertical-align: middle;
+            }
+        }
+        .story-card-actions{
+           margin-bottom: 65px;
+           padding: 0px 50px;
+            .story-card-likes {
+                i {
+                    color: #63666a;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+                i:hover {
+					 color: #ff0000;
+                }
+                span {
+                    color: #63666a;
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 24px;
+                }
+            }
+            .story-card-share {
+                i {
+                    color: #63666a;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+                span {
+                    color: #63666a;
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 24px;
+                }
+                .share-links{
+                    display: none;
+                }
+                .social-icon {
+                    display: inline-block;
+    
+                    #twitter {
+                        color: #1da1f2;
+                        font-size: 30px;
+                    }
+                    #facebook {
+                        color: #3B5998;
+                        font-size: 30px;
+                    }
+                }
+    
+            }
+            .story-card-share:hover .share-links{
+                    display: block;
+            }
+            .story-card-views {
+                i {
+                    color: #63666a;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+                span {
+                    color: #63666a;
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

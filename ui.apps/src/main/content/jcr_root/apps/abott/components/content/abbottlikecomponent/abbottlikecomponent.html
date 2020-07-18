@@ -1,0 +1,31 @@
+<!--/* PLACEHOLDER FOR ABOTT LIKE COMPONENT */-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="${component.title}" class="cq-placeholder"></div>
+<!--/* DECLARING LIKE MODEL OBJECT TO RENDER MODEL WITH COMPONENT*/-->
+<sly data-sly-use.likeobj="com.trainingproject.abott.core.models.LikeComponentModel"/>
+<div id="likecomp" class="row card-wrapper ml-0 mr-0">
+		<!--/* ACCESSING LIKE LOGO< TETX AND DESCRIPTION */-->
+            <div class="col-md-4 p-0 card-data card-likes">
+                <div class="sign-container">
+                    <img src="${likeobj.likelogo}" alt="heart-logo">
+                </div>
+                <p class="card-number card-likes__number">${likeobj.likecount}</p>
+                <div class="card-likes__text">${likeobj.likedesc}</div>
+
+            </div>
+            <div class="col-md-4 p-0 card-data card-likes_middle">
+                <div class="sign-container">
+                    <img src="${likeobj.inlogo}" alt="megaphone-logo">
+                </div>
+                <p class="card-number card-likes__number_middle">${likeobj.incount}</p>
+                <div class="card-likes__desc">${likeobj.indesc1}</div>
+                <div class="card-likes__info">${likeobj.indesc2  @ context='html'}</div>
+
+            </div>
+            <div class="col-md-4 p-0  card-data card-likes">
+                <div class="sign-container">
+                    <img src="${likeobj.viewlogo}" alt="eye-logo">
+                </div>
+                <p class="card-number card-likes__number">${likeobj.viewcount}</p>
+                <div class="card-likes__text">${likeobj.viewdesc}</div>
+            </div>
+        </div>
